@@ -2,30 +2,35 @@ package pizzaria;
 
 public class BuilderConcrect extends BuilderAbstract {
     public BuilderConcrect(){
-        pizza  = new Pizza();
+        pizzaSimples  = new PizzaSimples();
     };
     
+    public BuilderConcrect temDescricao(String descricao){
+        pizzaSimples.setDescricao(descricao);
+        return this;
+    }
+    
     public BuilderConcrect temQueijo(boolean queijo){
-        pizza.setQuejo(queijo);
+        pizzaSimples.setQuejo(queijo);
         return this;
     }
     
     public BuilderConcrect temCalabresa(boolean calabresa){
-        pizza.setCalabresa(calabresa);
+        pizzaSimples.setCalabresa(calabresa);
         return this;
     }
     
     public BuilderConcrect temBacon(boolean bacon){
-        pizza.setBacon(bacon);
+        pizzaSimples.setBacon(bacon);
         return this;
     }
     
     public BuilderConcrect temBorda(boolean borda){
-        pizza.setBorda(borda);
+        pizzaSimples.setBorda(borda);
         return this;
     }
     
-    public Pizza build(){
-        return pizza;
+    public PizzaSimples build(){
+        return pizzaSimples;
     }
 }
