@@ -34,15 +34,70 @@ public class PizzaSimples implements Pizza {
     }
 
     public void setQuejo(boolean queijo) {
-        this.queijo = queijo;
+        
+        if(queijo){
+            
+            BuscadorFreezer freezer = new BuscadorFreezer();
+            BuscadorEstoque estoque = new BuscadorEstoque();
+            freezer.setProximo(estoque);
+
+            BuscarIngrediente chainPremium = new BuscadorFreezer();
+            chainPremium.setProximo(estoque);
+            Boolean achou = chainPremium.buscarEmCadeia();
+
+            if(achou){
+                this.queijo = queijo;
+            }else {
+                this.queijo = false;
+            }
+        }else {
+            this.queijo = queijo;
+        }
+        
     }
 
     public void setCalabresa(boolean calabresa) {
-        this.calabresa = calabresa;
+        
+        if(calabresa){
+            
+            BuscadorFreezer freezer = new BuscadorFreezer();
+            BuscadorEstoque estoque = new BuscadorEstoque();
+            freezer.setProximo(estoque);
+
+            BuscarIngrediente chainPremium = new BuscadorFreezer();
+            chainPremium.setProximo(estoque);
+            Boolean achou = chainPremium.buscarEmCadeia();
+
+            if(achou){
+                this.calabresa = calabresa;
+            }else {
+                this.calabresa = false;
+            }
+        }else {
+            this.calabresa = calabresa;
+        }
     }
 
     public void setBacon(boolean bacon) {
-        this.bacon = bacon;
+        
+        if(bacon){
+            
+            BuscadorFreezer freezer = new BuscadorFreezer();
+            BuscadorEstoque estoque = new BuscadorEstoque();
+            freezer.setProximo(estoque);
+
+            BuscarIngrediente chainPremium = new BuscadorFreezer();
+            chainPremium.setProximo(estoque);
+            Boolean achou = chainPremium.buscarEmCadeia();
+
+            if(achou){
+                this.bacon = bacon;
+            }else {
+                this.bacon = false;
+            }
+        }else {
+            this.bacon = bacon;
+        }
     }
 
     public void setBorda(boolean borda) {
